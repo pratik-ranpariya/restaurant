@@ -1,0 +1,7 @@
+id,name,description,category,size,price,image,type
+1,Tomato Pizza,Tomato with freshly made pizza sauce with cheese,non-veg,"small,mediam,large","89,146,225",pizza.jpeg,punjabi
+2,Mysore Dosa,"awa- toasted, crispy and delicious dosa folded in with masala",non-veg,"mediam,large","135,229",dhosa.jpeg,chinese
+3,Crispy Veg Burger,Our best-selling burger with crispy veg patty fresh onion and our signature sauce,veg,Regular,25,burger.jpeg,gujarati
+4,Onion Pizza,Onion with freshly made pizza sauce with cheese,non-veg,"small,large","89,225",pizza.jpeg,fast-food
+5,Masala Dosa,"awa- toasted, crispy and delicious dosa folded in with masala",non-veg,"mediam,large","250,350",dhosa.jpeg,punjabi
+6,Combo Pack Burger,Our best-selling burger with crispy veg patty fresh onion and our signature sauce,veg,Regular,89,burger.jpeg,punjabi

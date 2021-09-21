@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <mate charest="utf-8" />
+    <title>Hello world!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body p-0">
+                        <div class="row p-5">
+                            <div class="col-md-6">
+                                <img src="http://via.placeholder.com/400x90?text=logo">
+                            </div>
+
+                            <div class="col-md-6 text-right">
+                                <p class="font-weight-bold mb-1" style="color: red;">Invoice #550</p>
+                                <p class="text-muted">{{date}}</p>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="row pb-5 p-5">
+                            <div class="col-md-6">
+                                <p class="font-weight-bold mb-4">Information</p>
+                                <p class="mb-1">Name: {{name}}</p>
+                                <p class="mb-1">Email: {{email}}</p>
+                                <p class="mb-1">Address: {{address}}</p>
+                                <p class="mb-1">Mobile: {{mobile}}</p>
+                            </div>
+                        </div>
+
+                        <div class="row p-5">
+                            <div class="col-md-12">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th class="border-0 text-uppercase small font-weight-bold">ID</th>
+                                            <th class="border-0 text-uppercase small font-weight-bold">subcriptions</th>
+                                            <th class="border-0 text-uppercase small font-weight-bold">start date</th>
+                                            <th class="border-0 text-uppercase small font-weight-bold">end date</th>
+                                            <th class="border-0 text-uppercase small font-weight-bold">price</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                        <td>1</td>
+                                            <td>{{subcription_type}}</td>
+                                            <td>{{start_date}}</td>
+                                            <td>{{end_date}}</td>
+                                            <td>{{price}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-row-reverse bg-dark text-white p-4">
+
+
+                            <div class="py-3 px-5 text-right">
+                                <div class="mb-2">Sub - Total amount</div>
+                                <div class="h2 font-weight-light">₹ {{price}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-light mt-5 mb-5 text-center small">by : <a class="text-light" target="_blank"
+                href="https://scannmenu.com">https://scannmenu.com</a></div>
+
+    </div>
+</body>
+
+</html>

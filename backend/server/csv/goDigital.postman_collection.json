@@ -1,0 +1,1025 @@
+{
+	"info": {
+		"_postman_id": "01846082-2a6d-4a8b-a955-53cc17f8cfba",
+		"name": "goDigital",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "restaurant",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "lapinoz.surat@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:4000/restaurants/login",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"restaurants",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"restaurant_type\": {\n            \"dining_table\": []\n        },\n        \"created_date\": \"2021-07-05T06:22:29.798Z\",\n        \"_id\": \"60e2a53b002e6007b471c3ba\",\n        \"name\": \"lapinoz\",\n        \"email\": \"lapinoz.surat@gmail.com\",\n        \"mobile\": 1234567890,\n        \"address\": \"surat, gujarat\",\n        \"city\": \"surat\",\n        \"state\": \"gujarat\",\n        \"country\": \"india\",\n        \"restaurant_logo\": \"logo.png\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/restaurants/login",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"restaurants",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "todayorder",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibGFwaW5veiIsImVtYWlsIjoibGFwaW5vei5zdXJhdEBnbWFpbC5jb20iLCJfaWQiOiI2MGVkYjk2NmRjZThhZjA5ZDRjNjY4YzciLCJpYXQiOjE2MjYyMzkzMDMsImV4cCI6MTY1Nzc3NTMwM30.9pGlmTEDWVTBDhgvleoEU9w7qps7ywkMdnnXwR_2rpg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:4000/restaurants/todayorder",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"restaurants",
+								"todayorder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change order status",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibGFwaW5veiIsImVtYWlsIjoibGFwaW5vei5zdXJhdEBnbWFpbC5jb20iLCJfaWQiOiI2MGVkYjk2NmRjZThhZjA5ZDRjNjY4YzciLCJpYXQiOjE2MjYyMzkzMDMsImV4cCI6MTY1Nzc3NTMwM30.9pGlmTEDWVTBDhgvleoEU9w7qps7ywkMdnnXwR_2rpg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"orderStatus\": \"success\",\n    \"order_id\": [\"3395720\",\"7872341\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/restaurants/change_order_status",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"restaurants",
+								"change_order_status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "today order details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGUyYTUzYjAwMmU2MDA3YjQ3MWMzYmEiLCJlbWFpbCI6ImxhcGlub3ouc3VyYXRAZ21haWwuY29tIiwiaWF0IjoxNjI1NTUxNzc0LCJleHAiOjE2MjgxNDM3NzR9.a6PA9muePFOKatz9qwW3oMU7d15WZfVDw5e113fGfso",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:4000/restaurants/today_order_details?status=success&date=2021-07-06",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"restaurants",
+								"today_order_details"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "success"
+								},
+								{
+									"key": "date",
+									"value": "2021-07-06"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create dyning table qrcode",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibGFwaW5veiIsImVtYWlsIjoibGFwaW5vei5zdXJhdEBnbWFpbC5jb20iLCJfaWQiOiI2MGVkYjk2NmRjZThhZjA5ZDRjNjY4YzciLCJpYXQiOjE2MjYyMzkzMDMsImV4cCI6MTY1Nzc3NTMwM30.9pGlmTEDWVTBDhgvleoEU9w7qps7ywkMdnnXwR_2rpg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:4000/restaurants/create_dining_table_qrcode/12",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"restaurants",
+								"create_dining_table_qrcode",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "profile update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibGFwaW5veiIsImVtYWlsIjoibGFwaW5vei5zdXJhdEBnbWFpbC5jb20iLCJfaWQiOiI2MGVkYjk2NmRjZThhZjA5ZDRjNjY4YzciLCJpYXQiOjE2MjYyMzkzMDMsImV4cCI6MTY1Nzc3NTMwM30.9pGlmTEDWVTBDhgvleoEU9w7qps7ywkMdnnXwR_2rpg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "dominoz",
+									"type": "text"
+								},
+								{
+									"key": "restaurent_logo",
+									"type": "file",
+									"src": "/C:/Users/prati/Pictures/7.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:4000/restaurants/profile_update",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"restaurants",
+								"profile_update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "imps",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibGFwaW5veiIsImVtYWlsIjoibGFwaW5vei5zdXJhdEBnbWFpbC5jb20iLCJfaWQiOiI2MGVkYjk2NmRjZThhZjA5ZDRjNjY4YzciLCJpYXQiOjE2MjYyMzkzMDMsImV4cCI6MTY1Nzc3NTMwM30.9pGlmTEDWVTBDhgvleoEU9w7qps7ywkMdnnXwR_2rpg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"paytm\": \"paytm hjfsd7fdybfusd\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/restaurants/imps",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"restaurants",
+								"imps"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "neworder",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibGFwaW5veiIsImVtYWlsIjoibGFwaW5vei5zdXJhdEBnbWFpbC5jb20iLCJfaWQiOiI2MGVkYjk2NmRjZThhZjA5ZDRjNjY4YzciLCJpYXQiOjE2MjYyMzkzMDMsImV4cCI6MTY1Nzc3NTMwM30.9pGlmTEDWVTBDhgvleoEU9w7qps7ywkMdnnXwR_2rpg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:4000/restaurants/neworder",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"restaurants",
+								"neworder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "subcription",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibGFwaW5veiIsImVtYWlsIjoibGFwaW5vei5zdXJhdEBnbWFpbC5jb20iLCJfaWQiOiI2MGVkYjk2NmRjZThhZjA5ZDRjNjY4YzciLCJpYXQiOjE2MjYyMzkzMDMsImV4cCI6MTY1Nzc3NTMwM30.9pGlmTEDWVTBDhgvleoEU9w7qps7ywkMdnnXwR_2rpg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "start_date",
+									"value": "2021-07-08",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "end_date",
+									"value": "2021-07-27",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "month",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "subcription_type",
+									"value": "take_away",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "599",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:4000/restaurants/subcription",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"restaurants",
+								"subcription"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "image_upload",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGUyYTUzYjAwMmU2MDA3YjQ3MWMzYmEiLCJlbWFpbCI6ImxhcGlub3ouc3VyYXRAZ21haWwuY29tIiwiaWF0IjoxNjI1NTUxNzc0LCJleHAiOjE2MjgxNDM3NzR9.a6PA9muePFOKatz9qwW3oMU7d15WZfVDw5e113fGfso",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/Users/roxomtechnologies/Downloads/0f1744 (1).jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:4000/restaurants/image_upload",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"restaurants",
+								"image_upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "menuupload",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibGFwaW5veiIsImVtYWlsIjoibGFwaW5vei5zdXJhdEBnbWFpbC5jb20iLCJfaWQiOiI2MGVkYjk2NmRjZThhZjA5ZDRjNjY4YzciLCJpYXQiOjE2MjYyMzkzMDMsImV4cCI6MTY1Nzc3NTMwM30.9pGlmTEDWVTBDhgvleoEU9w7qps7ywkMdnnXwR_2rpg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "csv",
+									"type": "file",
+									"src": "/C:/Users/Dell/Downloads/Untitled spreadsheet - Sheet1 (3).csv"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://64.225.86.46:4000/restaurants/menu",
+							"protocol": "http",
+							"host": [
+								"64",
+								"225",
+								"86",
+								"46"
+							],
+							"port": "4000",
+							"path": [
+								"restaurants",
+								"menu"
+							],
+							"query": [
+								{
+									"key": "img",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show qrcode",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYnVyZ2VyLWtpbmciLCJlbWFpbCI6ImJ1cmdlci1raW5nLmthbXJlakBnbWFpbC5jb20iLCJfaWQiOiI2MGYyNWUwNmY0Y2RiMzBlZjQwYzVjN2MiLCJpYXQiOjE2MjY0OTc1OTYsImV4cCI6MTY1ODAzMzU5Nn0.55Ghqf0uwHgwkBoXOg5CrYwM3ZrxJk14y95XG6k3TK0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:4000/restaurants/all_qrcode",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"restaurants",
+								"all_qrcode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "graph",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibGFwaW5veiIsImVtYWlsIjoibGFwaW5vei5zdXJhdEBnbWFpbC5jb20iLCJfaWQiOiI2MGVkYjk2NmRjZThhZjA5ZDRjNjY4YzciLCJpYXQiOjE2MjYyMzkzMDMsImV4cCI6MTY1Nzc3NTMwM30.9pGlmTEDWVTBDhgvleoEU9w7qps7ywkMdnnXwR_2rpg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:4000/restaurants/graph?month=7&year=2021",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"restaurants",
+								"graph"
+							],
+							"query": [
+								{
+									"key": "month",
+									"value": "7"
+								},
+								{
+									"key": "year",
+									"value": "2021"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgotpassword",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibGFwaW5veiIsImVtYWlsIjoibGFwaW5vei5zdXJhdEBnbWFpbC5jb20iLCJfaWQiOiI2MGVkYjk2NmRjZThhZjA5ZDRjNjY4YzciLCJpYXQiOjE2MjYyMzkzMDMsImV4cCI6MTY1Nzc3NTMwM30.9pGlmTEDWVTBDhgvleoEU9w7qps7ywkMdnnXwR_2rpg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"lapinoz.surat@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/restaurants/forgotpassword",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"restaurants",
+								"forgotpassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verifyotp",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibGFwaW5veiIsImVtYWlsIjoibGFwaW5vei5zdXJhdEBnbWFpbC5jb20iLCJfaWQiOiI2MGVkYjk2NmRjZThhZjA5ZDRjNjY4YzciLCJpYXQiOjE2MjYyMzkzMDMsImV4cCI6MTY1Nzc3NTMwM30.9pGlmTEDWVTBDhgvleoEU9w7qps7ywkMdnnXwR_2rpg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "lapinoz.surat@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "otp",
+									"value": "796875",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:4000/restaurants/verifyotp",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"restaurants",
+								"verifyotp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "newpassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:4000/restaurants/newpassword",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"restaurants",
+								"newpassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "today cancle orders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZGhic2FqaGRzIiwiZW1haWwiOiIxMjM0QHRlc3RpbmcuY29tIiwiX2lkIjoiNjBmOTA5MWQ5MDhlYjI0ZjA4MjVlMzM4IiwiaWF0IjoxNjI3MTA3MTkzLCJleHAiOjE2NTg2NDMxOTN9.ycHrxQDSZQZW81uTUqTjmdxxUpz3QGzdco3iszS85-c",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "64.225.86.46:4000/restaurants/todaycancleorders",
+							"host": [
+								"64",
+								"225",
+								"86",
+								"46"
+							],
+							"port": "4000",
+							"path": [
+								"restaurants",
+								"todaycancleorders"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"restaurant_id\": \"60edb966dce8af09d4c668c7\",\r\n    \"totalprice\": 1200,\r\n    \"payment\": \"google_pay\",\r\n    \"type\": {\r\n        \"type\": \"take_away\",\r\n        \"table_number\": null,\r\n        \"room_number\": null\r\n    },\r\n    \"item\": [\r\n        {\r\n            \"name\": \"pizza\",\r\n            \"price\": 200,\r\n            \"quentity\": 2\r\n        },\r\n        {\r\n            \"name\": \"dhosa\",\r\n            \"price\": 400,\r\n            \"quentity\": 2\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/users/order",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "restaurant menu",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/users/restaurant_menu?restaurant_id=60edb966dce8af09d4c668c7&dining_number=5",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"restaurant_menu"
+							],
+							"query": [
+								{
+									"key": "restaurant_id",
+									"value": "60edb966dce8af09d4c668c7"
+								},
+								{
+									"key": "dining_number",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "super admin",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"admin\",\n    \"password\": \"admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/superadmin/login",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"superadmin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "restaurent_status_count",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluIiwiX2lkIjoiNjBlZWJlNWMxODA2YjAzMWE0Zjg1NmMzIiwiaWF0IjoxNjI2MjU5MDUzLCJleHAiOjE2NTc3OTUwNTN9.pWC5XiN6e4JO1V1EXGsdGV7_HqV0pZti1oVSvZ2dwbE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:4000/superadmin/dashboardCount",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"superadmin",
+								"dashboardCount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create restaurant account",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluIiwiX2lkIjoiNjBlZWJlNWMxODA2YjAzMWE0Zjg1NmMzIiwiaWF0IjoxNjI2MjU5MDUzLCJleHAiOjE2NTc3OTUwNTN9.pWC5XiN6e4JO1V1EXGsdGV7_HqV0pZti1oVSvZ2dwbE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"burger-king\",\n    \"email\": \"burger-king.kamrej@gmail.com\",\n    \"password\": \"123456\",\n    \"address\": \"kamrej char rasta, NH-6, surat, india\",\n    \"city\": \"surat\",\n    \"state\": \"gujarat\",\n    \"country\": \"india\",\n    \"plans\": \"hotel\",take_away,dining_table\n    \"dining\": \"18\",\n    \"room\": \"78\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/superadmin/create_rest_account",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"superadmin",
+								"create_rest_account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "restaurents table",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluIiwiX2lkIjoiNjBlZWJlNWMxODA2YjAzMWE0Zjg1NmMzIiwiaWF0IjoxNjI2MjU5MDUzLCJleHAiOjE2NTc3OTUwNTN9.pWC5XiN6e4JO1V1EXGsdGV7_HqV0pZti1oVSvZ2dwbE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:4000/superadmin/restaurants_table",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"superadmin",
+								"restaurants_table"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "restaurent detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluIiwiX2lkIjoiNjBlZWJlNWMxODA2YjAzMWE0Zjg1NmMzIiwiaWF0IjoxNjI2MjU5MDUzLCJleHAiOjE2NTc3OTUwNTN9.pWC5XiN6e4JO1V1EXGsdGV7_HqV0pZti1oVSvZ2dwbE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:4000/superadmin/rastaurent_detail?restaurant_id=60edb966dce8af09d4c668c7",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"superadmin",
+								"rastaurent_detail"
+							],
+							"query": [
+								{
+									"key": "restaurant_id",
+									"value": "60edb966dce8af09d4c668c7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "restaurant subcription table",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluIiwiX2lkIjoiNjBlZWJlNWMxODA2YjAzMWE0Zjg1NmMzIiwiaWF0IjoxNjI2MjU5MDUzLCJleHAiOjE2NTc3OTUwNTN9.pWC5XiN6e4JO1V1EXGsdGV7_HqV0pZti1oVSvZ2dwbE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:4000/superadmin/restaurant_subcription",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"superadmin",
+								"restaurant_subcription"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "restaurant_subcription_modify",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluIiwiX2lkIjoiNjBlZWJlNWMxODA2YjAzMWE0Zjg1NmMzIiwiaWF0IjoxNjI2MjU5MDUzLCJleHAiOjE2NTc3OTUwNTN9.pWC5XiN6e4JO1V1EXGsdGV7_HqV0pZti1oVSvZ2dwbE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:4000/superadmin/restaurant_subcription_modify?restaurant_id=60edb966dce8af09d4c668c7&subcription_id=60eea818037d693574af500f&status=canceled",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"superadmin",
+								"restaurant_subcription_modify"
+							],
+							"query": [
+								{
+									"key": "restaurant_id",
+									"value": "60edb966dce8af09d4c668c7"
+								},
+								{
+									"key": "subcription_id",
+									"value": "60eea818037d693574af500f"
+								},
+								{
+									"key": "status",
+									"value": "canceled"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "restaurant status table",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluIiwiX2lkIjoiNjBlZWJlNWMxODA2YjAzMWE0Zjg1NmMzIiwiaWF0IjoxNjI2MjU5MDUzLCJleHAiOjE2NTc3OTUwNTN9.pWC5XiN6e4JO1V1EXGsdGV7_HqV0pZti1oVSvZ2dwbE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:4000/superadmin/restaurant_status_table",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"superadmin",
+								"restaurant_status_table"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "restaurant generate receipt table",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluIiwiX2lkIjoiNjBlZWJlNWMxODA2YjAzMWE0Zjg1NmMzIiwiaWF0IjoxNjI2MjU5MDUzLCJleHAiOjE2NTc3OTUwNTN9.pWC5XiN6e4JO1V1EXGsdGV7_HqV0pZti1oVSvZ2dwbE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:4000/superadmin/restaurant_generate_receipt_table",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"superadmin",
+								"restaurant_generate_receipt_table"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "generate_receipt",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluIiwiX2lkIjoiNjBlZWJlNWMxODA2YjAzMWE0Zjg1NmMzIiwiaWF0IjoxNjI2MjU5MDUzLCJleHAiOjE2NTc3OTUwNTN9.pWC5XiN6e4JO1V1EXGsdGV7_HqV0pZti1oVSvZ2dwbE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:4000/superadmin/generate_receipt?restaurant_id=60edb966dce8af09d4c668c7",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"superadmin",
+								"generate_receipt"
+							],
+							"query": [
+								{
+									"key": "restaurant_id",
+									"value": "60edb966dce8af09d4c668c7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "salesacoount",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGUyYTUzYjAwMmU2MDA3YjQ3MWMzYmEiLCJlbWFpbCI6ImxhcGlub3ouc3VyYXRAZ21haWwuY29tIiwiaWF0IjoxNjI1NTUxNzc0LCJleHAiOjE2MjgxNDM3NzR9.a6PA9muePFOKatz9qwW3oMU7d15WZfVDw5e113fGfso",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"lapinoz.sales@gmail.com\",\n    \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/restaurants/salesacoount",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"restaurants",
+								"salesacoount"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

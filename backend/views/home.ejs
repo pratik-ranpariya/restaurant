@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<title>Stripe Payment Demo</title>
+
+<body>
+    <div style=" height: 90vh;background-color: #d1e6f0;">
+        <div style="text-align: center;padding: 100px;">
+            <h3 style="padding: 50px;">Welcome to Pin Chef Payment Gateway</h3>
+            <form action="/api/payment" method="POST">
+                <script src="//checkout.stripe.com/v2/checkout.js" class="stripe-button" data-key="<%= data.key %>"
+                    data-amount="<%= data.amount %>" data-currency="usd" data-name="Pin Chef"
+                    data-description="Pin Chef Products" data-locale="auto">
+                    </script>
+                <input type="hidden" name="order_id" value="<%= data.order_id %>" />
+                <input type="hidden" name="user_id" value="<%= data.user_id %>" />
+                <input type="hidden" name="amount" value="<%= data.amount %>" />
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

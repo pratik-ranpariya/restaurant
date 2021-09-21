@@ -1,0 +1,111 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: max-content;
+  overflow: auto;
+  /* min-width: 80vw; */
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 20px;
+}
+table th {
+  border-spacing: 10px;
+}
+
+table td:last-child {
+  padding: 0px 0px;
+}
+table td,
+table th {
+  border-bottom: 1px solid #ddd;
+  text-align: start;
+}
+
+table td:first-child {
+  /* padding: 6px 10px; */
+  padding: 15px 5px;
+}
+table td:last-child {
+  padding: 6px 8px;
+}
+
+ table thead tr:last-child {
+  border-top-right-radius : 20px
+}
+
+table thead tr:first-child {
+  border-top-left-radius : 20px
+} 
+
+
+table tr {
+  text-align: center;
+}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: ghostwhite;
+  color: rgb(148, 146, 146);
+}
+.More_Details {
+  background: linear-gradient(to right, #ea7b9a, #fac7b6);
+  padding: 6px 15px;
+  text-align: center;
+  color: white;
+  border: transparent;
+  border-radius: 10px;
+}
+
+.Cancel_Details {
+  background: linear-gradient(to right, #ea7b9a, #fac7b6);
+  background: #ea7a9a;
+  padding: 6px 10px;
+  margin-right: 5px;
+  text-align: center;
+  color: white;
+  border: transparent;
+  border-radius: 10px;
+}
+.Resume_Details {
+  background: green;
+  padding: 6px 10px;
+  text-align: center;
+  color: white;
+  border: transparent;
+  border-radius: 10px;
+}
+
+.page-list > .active > .page-link {
+  border-radius: 15px;
+  background-color: #ea7a9a;
+  color: white !important;
+  z-index: 1;
+}
+.page-list > .page-item > .page-link {
+  /* background-color: white; */
+  color: #ea7a9a;
+  outline: none !important;
+  border: none;
+  box-shadow: none;
+  border-radius: 10px;
+}
+.page-list {
+  /* background-color: white; */
+  /* border-radius: 50px !important; */
+}
+
+
+table thead tr th small{
+  margin-left: 7px;
+}
+
+table thead tr th span{
+  margin-right: 10px;
+  float: right;
+}
+
+table tbody tr:last-child td{
+  border: none;
+}
+
